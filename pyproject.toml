@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+  "setuptools>=61.0",
+  "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "google-colab"
+version = "1.0.0"
+description = "Google Colaboratory tools"
+readme = "README.md"
+license = { text = "Apache 2.0" }
+authors = [ { name = "Google Colaboratory team", email = "colaboratory-team@google.com" } ]
+keywords = ["google", "colab", "ipython", "jupyter"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: POSIX",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: OS Independent",
+  "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+  "google-auth==2.38.0",
+  "ipykernel==6.17.1",
+  "ipyparallel==8.8.0",
+  "ipython==7.34.0",
+  "pandas==2.2.2",
+  "jupyter-server==2.14.0",
+  "portpicker==1.5.2",
+  "requests==2.32.4",
+  "tornado==6.5.1",
+]
+urls = { "Homepage" = "https://colaboratory.research.google.com/" }
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]

@@ -1,0 +1,9 @@
+  google-auth
+  ipykernel
+  ipyparallel
+  ipython
+  pandas
+  jupyter-server
+  portpicker
+  requests
+  tornado
